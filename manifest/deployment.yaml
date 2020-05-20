@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tree-deployment
+  namespace: ecosia
+  labels:
+    app: tree
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tree
+  template:
+    metadata:
+      labels:
+        app: tree
+    spec:
+      containers:
+      - name: tree-container
+        image: tree:latest
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: IfNotPresent
+        resources:
+            requests:
+              cpu: 50m
+              memory: 50Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
