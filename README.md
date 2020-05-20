@@ -7,7 +7,7 @@ The project uses the following dependencies
 2. [Minikube](https://minikube.sigs.k8s.io/docs/)
 
 
-#### How to setup the project
+#### How to run the application
 - Run the command below to enable minikube ingress addon
    ```
      minikube addons enable ingress
