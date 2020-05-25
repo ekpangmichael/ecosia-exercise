@@ -1,11 +1,13 @@
 import { errorMessage } from 'iyasunday';
 import { ERROR } from '../utils/constant';
-import config from '../config/index';
 import Tree from '../modules/tree/routes';
+import HealthCheck from '../modules/healthCheck/routes';
+
 
 export default app => {
   //const apiVersion = '/api/' + config.API_VERSION;
   app.use(Tree);
+  app.use(HealthCheck);
 
   app.use((err, req, res, next) => {
     if (err) {

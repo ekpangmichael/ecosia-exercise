@@ -19,7 +19,7 @@ The project uses the following dependencies
 
    > If you are on Mac or Linux the hosts file is location in /etc/hosts directory
 
-- Clone the repository and cd into the ecosia-exercise directory
+- Clone the repository and cd into it
 - Run deploy.sh script to build and deployed the application in Minikube
 	```
 	./deploy.sh
